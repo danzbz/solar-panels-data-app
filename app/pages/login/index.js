@@ -4,16 +4,12 @@ import styles from './styles';
 import DadosAcesso from '../../components/login/dadosAcesso';
 
 export default function Login({ navigation }) {
-  const buttonClickedHandler = () => {
-    window.alert('entrar');
-  };
-
   return (
     <View style={styles.container}>
       <DadosAcesso />
       <View style={styles.viewInput}>
         <TouchableOpacity
-          onPress={buttonClickedHandler}
+          onPress={() => navigation.navigate('Home')}
           style={styles.btnEntrar}>
           <Text>enter</Text>
         </TouchableOpacity>
